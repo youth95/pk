@@ -2,11 +2,19 @@ let p = 0.5;
 const speed = 0.02;
 
 const audio = new Audio('bgm.m4a');
+const boysAudio = new Audio("boys.m4a");
+const girlsAudio = new Audio("girls.m4a");
+
+audio.load();
+boysAudio.load();
+girlsAudio.load();
+audio.addEventListener('ended', () => audio.play());
+
 let bgmPlayed = false;
 const applyP = () => {
   if (bgmPlayed === false) {
     bgmPlayed = true;
-    audio.play();
+    // audio.play();
   }
   const girls = p * 100;
   const boys = (1 - p) * 100;
@@ -44,12 +52,18 @@ document.querySelector<HTMLDivElement>('.boys')!.addEventListener('pointerdown',
   p -= speed;
   applyP();
   check();
+  boysAudio.pause();
+  boysAudio.currentTime = 0;
+  boysAudio.play();
 });
 
 document.querySelector<HTMLDivElement>('.girls')!.addEventListener('pointerdown', () => {
   p += speed;
   applyP();
   check();
+  girlsAudio.pause();
+  girlsAudio.currentTime = 0;
+  girlsAudio.play();
 });
 
 window.addEventListener('touchstart', ev => {
