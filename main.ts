@@ -70,3 +70,8 @@ window.addEventListener('touchstart', ev => {
   ev.stopPropagation();
   ev.preventDefault();
 })
+
+window.addEventListener('touchmove', ev => {
+  ev.stopPropagation();
+  ev.preventDefault();
+}, false)
