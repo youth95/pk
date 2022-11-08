@@ -1,7 +1,7 @@
 let p = 0.5;
 const speed = 0.02;
 
-const audio = new Audio('bgm.mp3');
+const audio = new Audio('bgm.m4a');
 let bgmPlayed = false;
 const applyP = () => {
   if (bgmPlayed === false) {
