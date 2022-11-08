@@ -1,0 +1,9 @@
+{
+  "start_url": "/",
+  "name": "PK",
+  "short_name": "PK",
+  "icons": [],
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000"
+}
