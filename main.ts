@@ -14,7 +14,7 @@ let bgmPlayed = false;
 const applyP = () => {
   if (bgmPlayed === false) {
     bgmPlayed = true;
-    // audio.play();
+    audio.play();
   }
   const girls = p * 100;
   const boys = (1 - p) * 100;
